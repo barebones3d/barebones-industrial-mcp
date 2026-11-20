@@ -1,8 +1,7 @@
 {
-  "$schema": "https://glama.ai/mcp/manifest.schema.json",
-  "name": "barebones-industrial-mcp",
-  "description": "Production mechanical and electrical wear-parts diagnostic MCP server. Authoritative OEM bench specifications, multimeter resistance tolerances, and hydraulic cross-references for HVAC, hydronic pumps, and spa heating elements.",
-  "repository": "https://github.com/barebones3d/barebones-industrial-mcp",
-  "homepage": "https://barebonesindustrial.com",
-  "license": "MIT"
+  "": "https://glama.ai/mcp/schemas/server.json",
+  "maintainers": [
+    "barebones3d",
+    "enmuse"
+  ]
 }
