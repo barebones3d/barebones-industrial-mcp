@@ -1,0 +1,46 @@
+{
+  "name": "barebones-industrial-mcp",
+  "version": "1.0.2",
+  "description": "OEM bench specifications and multimeter diagnostic MCP tools for HVAC, hydronic pumps, and spa heating elements.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "barebones-industrial-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "smithery.yaml",
+    "glama.json"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "hvac",
+    "diagnostics",
+    "furnace-igniter",
+    "circulator-pump",
+    "hot-tub-elements"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/barebones3d/barebones-industrial-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/barebones3d/barebones-industrial-mcp/issues"
+  },
+  "homepage": "https://barebonesindustrial.com",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "zod": "^4.6.7"
+  }
+}

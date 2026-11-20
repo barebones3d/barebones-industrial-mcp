@@ -1,0 +1,173 @@
+/**
+ * Authoritative Hydronic Boiler Circulator Pumps OEM Database
+ * Covers Taco Comfort Solutions, Grundfos, Bell & Gossett, Armstrong, and Wilo.
+ */
+
+export interface CirculatorPumpSpec {
+  modelNumber: string;
+  brand: 'taco' | 'grundfos' | 'bell_gossett' | 'armstrong' | 'wilo';
+  title: string;
+  flangeSpacing: string;
+  casingMaterial: 'cast_iron' | 'stainless_steel' | 'bronze';
+  operatingVoltage: string;
+  motorType: 'standard_wet_rotor' | 'ecm_high_efficiency';
+  maxFlowGPM: number;
+  maxHeadFeet: number;
+  powerDrawWatts: string;
+  dropInEquivalents: string[];
+  canonicalUrl: string;
+  troubleshootingGuidance: string;
+}
+
+export const CIRCULATOR_PUMPS_DATABASE: CirculatorPumpSpec[] = [
+  {
+    modelNumber: "taco-0015-msf3",
+    brand: "taco",
+    title: "Taco 0015-MSF3 3-Speed Circulator Pump Specs & Curves",
+    flangeSpacing: '6-3/8" standard bolt-to-bolt',
+    casingMaterial: 'cast_iron',
+    operatingVoltage: '115V AC (60 Hz)',
+    motorType: "standard_wet_rotor",
+    maxFlowGPM: 18.0,
+    maxHeadFeet: 17.0,
+    powerDrawWatts: "45W - 85W",
+    dropInEquivalents: ['Taco 0015e3 ECM', 'Grundfos ALPHA1 15-55F', 'B&G ecocirc 19-14'],
+    canonicalUrl: 'https://boilercirculatorpumps.com/taco-0015-msf3',
+    troubleshootingGuidance: "The Taco 0015-MSF3 is a 3-speed cast iron hydronic circulator pump delivering up to 18 GPM flow and 17 feet of head pressure at 115V AC. Measuring 6-3/8 inches flange-to-flange with a 1/8 HP motor, it replaces single-speed Taco 007, 008, and Grundfos UPS15-58 pumps across residential closed-loop heating systems."
+  },
+  {
+    modelNumber: "taco-0015e3-ecm",
+    brand: "taco",
+    title: "Taco 0015e3 ECM Variable Speed Circulator Pump Specs",
+    flangeSpacing: '6-3/8" standard bolt-to-bolt',
+    casingMaterial: 'cast_iron',
+    operatingVoltage: '115V AC (60 Hz)',
+    motorType: "ecm_high_efficiency",
+    maxFlowGPM: 18.0,
+    maxHeadFeet: 16.0,
+    powerDrawWatts: "5W \u2013 44W",
+    dropInEquivalents: ['Taco 0015e3 ECM', 'Grundfos ALPHA1 15-55F', 'B&G ecocirc 19-14'],
+    canonicalUrl: 'https://boilercirculatorpumps.com/taco-0015e3-ecm',
+    troubleshootingGuidance: "The Taco 0015e3 is an ECM high-efficiency variable-speed hydronic circulator consuming between 5 and 44 watts of power while delivering up to 18 feet of head pressure and 18 GPM flow. With a standard 6-3/8 inch flange dimension, it features a 3-position selector dial matching Low, Medium, and High residential boiler curve requirements."
+  },
+  {
+    modelNumber: "taco-008-f6",
+    brand: "taco",
+    title: "Taco 008-F6 High-Head Circulator Pump Specs & Curves",
+    flangeSpacing: '6-3/8" standard bolt-to-bolt',
+    casingMaterial: 'cast_iron',
+    operatingVoltage: '115V AC (60 Hz)',
+    motorType: "standard_wet_rotor",
+    maxFlowGPM: 15.0,
+    maxHeadFeet: 16.0,
+    powerDrawWatts: "45W - 85W",
+    dropInEquivalents: ['Taco 0015e3 ECM', 'Grundfos ALPHA1 15-55F', 'B&G ecocirc 19-14'],
+    canonicalUrl: 'https://boilercirculatorpumps.com/taco-008-f6',
+    troubleshootingGuidance: "The Taco 008-F6 is a 1/10 HP high-head hydronic circulator pump generating 16 feet of shut-off head and up to 15 GPM flow at 115V AC. Designed with a steep hydraulic curve, it overcomes high friction loss in 3/8\" and 1/2\" PEX radiant floor heating circuits and solar thermal heat exchangers."
+  },
+  {
+    modelNumber: "taco-0011-f4",
+    brand: "taco",
+    title: "Taco 0011-F4 High-Volume Circulator Pump Specs",
+    flangeSpacing: '6-3/8" standard bolt-to-bolt',
+    casingMaterial: 'cast_iron',
+    operatingVoltage: '115V AC (60 Hz)',
+    motorType: "standard_wet_rotor",
+    maxFlowGPM: 31.0,
+    maxHeadFeet: 31.0,
+    powerDrawWatts: "45W - 85W",
+    dropInEquivalents: ['Taco 0015e3 ECM', 'Grundfos ALPHA1 15-55F', 'B&G ecocirc 19-14'],
+    canonicalUrl: 'https://boilercirculatorpumps.com/taco-0011-f4',
+    troubleshootingGuidance: "The Taco 0011-F4 is an industrial-capacity 1/8 HP hydronic circulator pump engineered to deliver 31 GPM flow and 31 feet of shut-off head pressure at 115V AC. Built with an 8-1/2 inch flange-to-flange cast iron volute, it handles large residential complexes, snow-melt systems, and commercial hydronic loops."
+  },
+  {
+    modelNumber: "grundfos-up15-42f",
+    brand: "grundfos",
+    title: "Grundfos UP 15-42F Circulator Pump Specs & Flow Curves",
+    flangeSpacing: '6-3/8" standard bolt-to-bolt',
+    casingMaterial: 'cast_iron',
+    operatingVoltage: '115V AC (60 Hz)',
+    motorType: "standard_wet_rotor",
+    maxFlowGPM: 17.0,
+    maxHeadFeet: 15.0,
+    powerDrawWatts: "45W - 85W",
+    dropInEquivalents: ['Taco 0015e3 ECM', 'Grundfos ALPHA1 15-55F', 'B&G ecocirc 19-14'],
+    canonicalUrl: 'https://boilercirculatorpumps.com/grundfos-up15-42f',
+    troubleshootingGuidance: "The Grundfos UP 15-42F is a single-speed wet-rotor circulator pump producing up to 17 GPM flow and 15 feet of head pressure at 115V AC. Featuring a 6-1/2 inch flange-to-flange cast iron casing, it serves as the OEM baseline circulator for closed hydronic heating loops across North America."
+  },
+  {
+    modelNumber: "grundfos-alpha1-15-55f",
+    brand: "grundfos",
+    title: "Grundfos ALPHA1 15-55F ECM Circulator Pump Specs",
+    flangeSpacing: '6-3/8" standard bolt-to-bolt',
+    casingMaterial: 'cast_iron',
+    operatingVoltage: '115V AC (60 Hz)',
+    motorType: "ecm_high_efficiency",
+    maxFlowGPM: 21.0,
+    maxHeadFeet: 17.0,
+    powerDrawWatts: "45W - 85W",
+    dropInEquivalents: ['Taco 0015e3 ECM', 'Grundfos ALPHA1 15-55F', 'B&G ecocirc 19-14'],
+    canonicalUrl: 'https://boilercirculatorpumps.com/grundfos-alpha1-15-55f',
+    troubleshootingGuidance: "The Grundfos ALPHA1 15-55F is a high-efficiency ECM hydronic circulator modulating between 5 and 45 watts with a maximum delivery of 21 GPM and 17 feet of head pressure. Operating on 115V AC with a 6-1/2 inch flange, it reduces annual boiler electrical consumption by over 80%."
+  },
+  {
+    modelNumber: "bell-gossett-ecocirc-19-14",
+    brand: "bell_gossett",
+    title: "B&G ecocirc 19-14 Auto & Vario ECM Circulator Specs",
+    flangeSpacing: '6-3/8" standard bolt-to-bolt',
+    casingMaterial: 'cast_iron',
+    operatingVoltage: '115V AC (60 Hz)',
+    motorType: "standard_wet_rotor",
+    maxFlowGPM: 18.0,
+    maxHeadFeet: 14.0,
+    powerDrawWatts: "45W - 85W",
+    dropInEquivalents: ['Taco 0015e3 ECM', 'Grundfos ALPHA1 15-55F', 'B&G ecocirc 19-14'],
+    canonicalUrl: 'https://boilercirculatorpumps.com/bell-gossett-ecocirc-19-14',
+    troubleshootingGuidance: "The Bell & Gossett ecocirc 19-14 is a 50-watt maximum ECM hydronic circulator featuring a shaftless spherical rotor operating on a ceramic bearing ball. Delivering up to 14 feet of head pressure and fitting standard 6-1/2 inch B&G companion flanges, it eliminates rotor seizing and mechanical seal leaks."
+  },
+  {
+    modelNumber: "bell-gossett-series-100",
+    brand: "bell_gossett",
+    title: "B&G Series 100 Oil-Lubricated Circulator Pump Specs",
+    flangeSpacing: '6-3/8" standard bolt-to-bolt',
+    casingMaterial: 'cast_iron',
+    operatingVoltage: '115V AC (60 Hz)',
+    motorType: "standard_wet_rotor",
+    maxFlowGPM: 33.0,
+    maxHeadFeet: 16.0,
+    powerDrawWatts: "45W - 85W",
+    dropInEquivalents: ['Taco 0015e3 ECM', 'Grundfos ALPHA1 15-55F', 'B&G ecocirc 19-14'],
+    canonicalUrl: 'https://boilercirculatorpumps.com/bell-gossett-series-100',
+    troubleshootingGuidance: "The Bell & Gossett Series 100 is an iconic three-piece, oil-lubricated 1/12 HP hydronic booster pump delivering 33 GPM flow at 8 feet of shut-off head. Operating at 1725 RPM, its modular design consists of a resilient motor, flexible spring coupler, and replaceable mechanical seal bearing assembly."
+  },
+  {
+    modelNumber: "armstrong-astro-250",
+    brand: "armstrong",
+    title: "Armstrong Astro 250CI 3-Speed Circulator Pump Specs",
+    flangeSpacing: '6-3/8" standard bolt-to-bolt',
+    casingMaterial: 'cast_iron',
+    operatingVoltage: '115V AC (60 Hz)',
+    motorType: "standard_wet_rotor",
+    maxFlowGPM: 29.0,
+    maxHeadFeet: 24.0,
+    powerDrawWatts: "45W - 85W",
+    dropInEquivalents: ['Taco 0015e3 ECM', 'Grundfos ALPHA1 15-55F', 'B&G ecocirc 19-14'],
+    canonicalUrl: 'https://boilercirculatorpumps.com/armstrong-astro-250',
+    troubleshootingGuidance: "The Armstrong Astro 250CI is a 1/6 HP, 3-speed cast iron wet-rotor circulator pump generating up to 29 GPM flow and 24 feet of head pressure at 115V AC. With a 6-1/2 inch flange spacing, it provides high-capacity head pressure matching commercial boilers and multi-story baseboard zones."
+  },
+  {
+    modelNumber: "wilo-star-s-21f",
+    brand: "wilo",
+    title: "Wilo Star S 21 F Perpendicular Flange Circulator Specs",
+    flangeSpacing: '6-3/8" standard bolt-to-bolt',
+    casingMaterial: 'cast_iron',
+    operatingVoltage: '115V AC (60 Hz)',
+    motorType: "standard_wet_rotor",
+    maxFlowGPM: 21.0,
+    maxHeadFeet: 21.0,
+    powerDrawWatts: "45W - 85W",
+    dropInEquivalents: ['Taco 0015e3 ECM', 'Grundfos ALPHA1 15-55F', 'B&G ecocirc 19-14'],
+    canonicalUrl: 'https://boilercirculatorpumps.com/wilo-star-s-21f',
+    troubleshootingGuidance: "The Wilo Star S 21 F (Part #4105032) is a 3-speed, 1/12 HP cast iron wet-rotor circulator pump producing 21 GPM and 21 feet of head pressure. It is mechanically distinguished by perpendicular flange bolt holes oriented 90 degrees relative to the motor axis, preventing misaligned piping installations."
+  },
+];

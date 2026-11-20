@@ -1,0 +1,184 @@
+/**
+ * Authoritative Hot Tub & Spa Heating Elements OEM Database
+ * Covers Balboa Water Group, Watkins No-Fault, Sundance Spas, Gecko Alliance, HydroQuip, and Cal Spas.
+ */
+
+export interface HeatingElementSpec {
+  partNumber: string;
+  brand: 'balboa' | 'watkins' | 'sundance' | 'gecko' | 'hydroquip' | 'cal_spas' | 'universal';
+  title: string;
+  ratedWatts: number;
+  ratedVolts: number;
+  nominalColdOhms: number;
+  coldResistanceRange: string;
+  manifoldDimensions: string;
+  terminalOffset: string;
+  metallurgy: 'incoloy_800' | 'titanium' | 'incoloy_840';
+  sensorCompatibility: string;
+  topsideErrorCodes: string[];
+  canonicalUrl: string;
+  troubleshootingGuidance: string;
+}
+
+export const HEATING_ELEMENTS_DATABASE: HeatingElementSpec[] = [
+  {
+    partNumber: "balboa-58104",
+    brand: "balboa",
+    title: "Balboa 58104 M7 4.0kW Spa Heater Specs & Resistance",
+    ratedWatts: 4000,
+    ratedVolts: 240,
+    nominalColdOhms: 14.4,
+    coldResistanceRange: "14.4 \u03a9 (\u00b15% tolerance)",
+    manifoldDimensions: "15\" x 2\" Tube",
+    terminalOffset: '1.25" standard 2" tube spacing',
+    metallurgy: "incoloy_800",
+    sensorCompatibility: 'Dual M7 thermistors / pressure switch bypass',
+    topsideErrorCodes: ["dr", "sn", "HL", "FLO", "HFL", "OH"],
+    canonicalUrl: 'https://hottubheatingelements.com/balboa-58104',
+    troubleshootingGuidance: "The Balboa 58104 is a 4.0 kW, 240-volt (convertible to 1.0 kW @ 120V) flow-through spa heater assembly measuring 15 inches in length with a 2-inch diameter stainless steel tube. Nominal bench cold resistance is 14.4 ohms (acceptable span 13.8\u201315.0\u03a9). Equipped with dual M7 temperature/hi-limit sensors, it requires no pressure switch."
+  },
+  {
+    partNumber: "balboa-58130",
+    brand: "balboa",
+    title: "Balboa 58130 5.5kW Titanium Spa Heater Specs & Ohms",
+    ratedWatts: 5500,
+    ratedVolts: 240,
+    nominalColdOhms: 10.5,
+    coldResistanceRange: "10.5 \u03a9 (\u00b15% tolerance)",
+    manifoldDimensions: "15\" x 2\" Stainless Tube",
+    terminalOffset: '1.25" standard 2" tube spacing',
+    metallurgy: "incoloy_800",
+    sensorCompatibility: 'Dual M7 thermistors / pressure switch bypass',
+    topsideErrorCodes: ["dr", "sn", "HL", "FLO", "HFL", "OH"],
+    canonicalUrl: 'https://hottubheatingelements.com/balboa-58130',
+    troubleshootingGuidance: "The Balboa 58130 is a 5.5 kW, 240-volt premium flow-through spa heater assembly featuring solid Grade 2 Titanium immersion tubing. Tested cold resistance is 10.5 ohms (\u00b10.5\u03a9). Designed to eliminate pitting corrosion from salt-chlorine generators, it replaces standard Balboa 58083 Incoloy assemblies without control board modifications."
+  },
+  {
+    partNumber: "watkins-73791",
+    brand: "watkins",
+    title: "Watkins 73791 No-Fault 6.0kW Titanium Heater Specs",
+    ratedWatts: 4000,
+    ratedVolts: 240,
+    nominalColdOhms: 9.6,
+    coldResistanceRange: "9.6 \u03a9 (\u00b15% tolerance)",
+    manifoldDimensions: "15\" x 2\" Stainless Tube",
+    terminalOffset: '1.25" standard 2" tube spacing',
+    metallurgy: "incoloy_800",
+    sensorCompatibility: 'Dual M7 thermistors / pressure switch bypass',
+    topsideErrorCodes: ["dr", "sn", "HL", "FLO", "HFL", "OH"],
+    canonicalUrl: 'https://hottubheatingelements.com/watkins-73791',
+    troubleshootingGuidance: "The Watkins 73791 No-Fault is a 6.0 kW, 240-volt cylindrical dual-pass titanium PDR spa heater engineered for Hot Spring and Tiger River commercial and large-volume residential hot tubs. Bench cold resistance measures 9.6 ohms (\u00b10.4\u03a9). Operates with low-flow SilentFlo 5000 circulation pumps delivering minimum 8 GPM flow."
+  },
+  {
+    partNumber: "watkins-7211",
+    brand: "watkins",
+    title: "Watkins 7211 Trumpet Spa Heating Element Specs & Ohms",
+    ratedWatts: 4000,
+    ratedVolts: 240,
+    nominalColdOhms: 14.4,
+    coldResistanceRange: "14.4 \u03a9 (\u00b15% tolerance)",
+    manifoldDimensions: "15\" x 2\" Stainless Tube",
+    terminalOffset: '1.25" standard 2" tube spacing',
+    metallurgy: "incoloy_800",
+    sensorCompatibility: 'Dual M7 thermistors / pressure switch bypass',
+    topsideErrorCodes: ["dr", "sn", "HL", "FLO", "HFL", "OH"],
+    canonicalUrl: 'https://hottubheatingelements.com/watkins-7211',
+    troubleshootingGuidance: "The Watkins 7211 is a 4.0 kW, 240-volt circular trumpet-flanged heating element engineered for 1990\u20131996 Hot Spring and Tiger River classic copper heater bodies. Measured cold resistance is 14.4 ohms (acceptable span 13.8\u201315.0\u03a9). It can be maintained with fresh Viton seals or upgraded to the modern 73790 No-Fault PDR tube."
+  },
+  {
+    partNumber: "sundance-6500-301",
+    brand: "sundance",
+    title: "Sundance 6500-301 5.5kW Curled Flow-Through Heater",
+    ratedWatts: 4000,
+    ratedVolts: 240,
+    nominalColdOhms: 10.5,
+    coldResistanceRange: "10.5 \u03a9 (\u00b15% tolerance)",
+    manifoldDimensions: "15\" x 2\" Stainless Tube",
+    terminalOffset: '1.25" standard 2" tube spacing',
+    metallurgy: "incoloy_800",
+    sensorCompatibility: 'Dual M7 thermistors / pressure switch bypass',
+    topsideErrorCodes: ["dr", "sn", "HL", "FLO", "HFL", "OH"],
+    canonicalUrl: 'https://hottubheatingelements.com/sundance-6500-301',
+    troubleshootingGuidance: "The Sundance 6500-301 is a 5.5 kW, 240-volt curved stainless steel flow-through heater manifold engineered with an offset radius to fit tightly contoured equipment bays in Sundance 780/880 Series and Jacuzzi J-300/J-400 Series spas. Tested cold resistance is 10.5 ohms (\u00b10.5\u03a9)."
+  },
+  {
+    partNumber: "gecko-9920-100338",
+    brand: "gecko",
+    title: "Gecko 9920-100338 4.0kW Heat.Wav Element Specs",
+    ratedWatts: 4000,
+    ratedVolts: 240,
+    nominalColdOhms: 14.4,
+    coldResistanceRange: "14.4 \u03a9 (\u00b15% tolerance)",
+    manifoldDimensions: "15\" x 2\" Stainless Tube",
+    terminalOffset: '1.25" standard 2" tube spacing',
+    metallurgy: "incoloy_800",
+    sensorCompatibility: 'Dual M7 thermistors / pressure switch bypass',
+    topsideErrorCodes: ["dr", "sn", "HL", "FLO", "HFL", "OH"],
+    canonicalUrl: 'https://hottubheatingelements.com/gecko-9920-100338',
+    troubleshootingGuidance: "The Gecko 9920-100338 is a 4.0 kW, 240-volt Incoloy 800 foldback replacement heating element for Gecko in.ye, in.yt, and in.xe Heat.Wav integrated heater housings. Measured cold resistance is 14.4 ohms (acceptable span 13.8\u201315.0\u03a9). Features 1.25-inch terminal post center spacing."
+  },
+  {
+    partNumber: "gecko-9920-100340",
+    brand: "gecko",
+    title: "Gecko 9920-100340 5.5kW Heat.Wav Spa Heater Specs",
+    ratedWatts: 5500,
+    ratedVolts: 240,
+    nominalColdOhms: 10.5,
+    coldResistanceRange: "10.5 \u03a9 (\u00b15% tolerance)",
+    manifoldDimensions: "15\" x 2\" Tube",
+    terminalOffset: '1.25" standard 2" tube spacing',
+    metallurgy: "incoloy_800",
+    sensorCompatibility: 'Dual M7 thermistors / pressure switch bypass',
+    topsideErrorCodes: ["dr", "sn", "HL", "FLO", "HFL", "OH"],
+    canonicalUrl: 'https://hottubheatingelements.com/gecko-9920-100340',
+    troubleshootingGuidance: "The Gecko 9920-100340 is a 5.5 kW, 240-volt complete flow-through heater manifold assembly utilizing Gecko's in.flo electronic dry-fire protection technology. Bench cold resistance is 10.5 ohms (\u00b10.5\u03a9). Direct drop-in replacement for in.ye and in.yt spa control packs."
+  },
+  {
+    partNumber: "hydroquip-26-0071",
+    brand: "hydroquip",
+    title: "HydroQuip 26-0071 5.5kW Flow-Through Heater Specs",
+    ratedWatts: 5500,
+    ratedVolts: 240,
+    nominalColdOhms: 10.5,
+    coldResistanceRange: "10.5 \u03a9 (\u00b15% tolerance)",
+    manifoldDimensions: "15\" x 2\" Stainless Tube",
+    terminalOffset: '1.25" standard 2" tube spacing',
+    metallurgy: "incoloy_800",
+    sensorCompatibility: 'Dual M7 thermistors / pressure switch bypass',
+    topsideErrorCodes: ["dr", "sn", "HL", "FLO", "HFL", "OH"],
+    canonicalUrl: 'https://hottubheatingelements.com/hydroquip-26-0071',
+    troubleshootingGuidance: "The HydroQuip 26-0071 is a 5.5 kW, 240-volt universal replacement flow-through spa heater assembly measuring 15 inches in length by 2 inches in diameter. Tested cold resistance is 10.5 ohms (\u00b10.5\u03a9). Fitted with an Incoloy 800 element and 1/8\" NPT pressure switch tapping."
+  },
+  {
+    partNumber: "hydroquip-26-0071-7s",
+    brand: "hydroquip",
+    title: "HydroQuip 26-0071-7S Titanium 5.5kW Spa Heater",
+    ratedWatts: 5500,
+    ratedVolts: 240,
+    nominalColdOhms: 10.5,
+    coldResistanceRange: "10.5 \u03a9 (\u00b15% tolerance)",
+    manifoldDimensions: "15\" x 2\" Stainless Tube",
+    terminalOffset: '1.25" standard 2" tube spacing',
+    metallurgy: "incoloy_800",
+    sensorCompatibility: 'Dual M7 thermistors / pressure switch bypass',
+    topsideErrorCodes: ["dr", "sn", "HL", "FLO", "HFL", "OH"],
+    canonicalUrl: 'https://hottubheatingelements.com/hydroquip-26-0071-7s',
+    troubleshootingGuidance: "The HydroQuip 26-0071-7S is a 5.5 kW, 240-volt universal Grade 2 Titanium flow-through spa heater assembly. Tested cold resistance is 10.5 ohms (\u00b10.5\u03a9). Designed as an indestructible upgrade for saltwater sanitizing systems and mineral-rich hard water applications."
+  },
+  {
+    partNumber: "cal-spas-hea14100040",
+    brand: "cal_spas",
+    title: "Cal Spas HEA14100040 5.5kW XL Spa Heater Specs",
+    ratedWatts: 5500,
+    ratedVolts: 240,
+    nominalColdOhms: 10.5,
+    coldResistanceRange: "10.5 \u03a9 (\u00b15% tolerance)",
+    manifoldDimensions: "15\" x 2\" Tube",
+    terminalOffset: '1.25" standard 2" tube spacing',
+    metallurgy: "incoloy_800",
+    sensorCompatibility: 'Dual M7 thermistors / pressure switch bypass',
+    topsideErrorCodes: ["dr", "sn", "HL", "FLO", "HFL", "OH"],
+    canonicalUrl: 'https://hottubheatingelements.com/cal-spas-hea14100040',
+    troubleshootingGuidance: "The Cal Spas HEA14100040 is a 5.5 kW, 240-volt XL flow-through spa heater assembly measuring 15 inches in length by 2 inches in diameter. Tested cold resistance is 10.5 ohms (\u00b10.5\u03a9). Fully compatible with Cal Spas 5100, 6200, and 9800 equipment systems using Balboa electronics."
+  },
+];
